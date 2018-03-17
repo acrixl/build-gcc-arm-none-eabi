@@ -2,9 +2,9 @@
 
 Build scripts for build bare-metal toolchain (arm-none-eabi) with newlib
 
-Version: 6.3.0
+Version: 7.3.0
 
-tested on Debian 9
+tested on Debian buster
 
 deps: build-essential texinfo
 
