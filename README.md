@@ -9,7 +9,7 @@ tested on Debian 9
 deps: build-essential texinfo
 
 
-##settings.sh
+## settings.sh
 
 MAKE_OPTS=-j4  make options
 
