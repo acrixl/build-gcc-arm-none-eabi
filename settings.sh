@@ -1,4 +1,5 @@
-
+PKG_VERSION=7.3.0-R1
+PKG_NAME=toolchain-arm-none-eabi
 
 GCC_VERSION=gcc-7.3.0
 GCC_WGET_ADDR=http://ftp.gnu.org/gnu/gcc/$GCC_VERSION/$GCC_VERSION.tar.xz
@@ -39,6 +40,14 @@ SRCE_TARGET_DIR=srce
 BUILD_DIR=build
 
 TARGET_TMP_PREFIX=out
+
+TARGET_TMP_PREFIX_FULL=$TARGET_TMP_PREFIX/${PKG_NAME}_$PKG_VERSION
+
+TAR_DIR=tarball
+
+TAR_NAME=${PKG_NAME}_$PKG_VERSION
+
+PKG_PREFIX=/opt
 
 
 TARGET_ARCH=arm-none-eabi

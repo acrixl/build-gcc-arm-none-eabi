@@ -1,13 +1,15 @@
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+CDIR="$(pwd)"
 
 . settings.sh
 
-TPREFIX=`readlink -f $TARGET_TMP_PREFIX`
+TPREFIX=`readlink -f $TARGET_TMP_PREFIX_FULL`
 
 mkdir -p $BUILD_DIR/build-gdb
 
 cd $BUILD_DIR/build-gdb
 
-export PATH=$TPREFIX/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export PATH=$TPREFIX/bin:/usr/bin:/bin
 
 ../../$SRCE_TARGET_DIR/$GDB_VERSION/configure \
  --prefix=$TPREFIX \

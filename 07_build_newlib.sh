@@ -1,13 +1,17 @@
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+CDIR="$(pwd)"
 
 . settings.sh
 
-TPREFIX=`readlink -f $TARGET_TMP_PREFIX`
+TPREFIX=`readlink -f $TARGET_TMP_PREFIX_FULL`
+
+mkdir -p $TPREFIX
 
 mkdir -p $BUILD_DIR/build-newlib
 
 cd $BUILD_DIR/build-newlib
 
-export PATH=$TPREFIX/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export PATH=$TPREFIX/bin:/usr/bin:/bin
 
 ../../$SRCE_TARGET_DIR/$NEWLIB_VERSION/configure \
  --prefix=$TPREFIX \

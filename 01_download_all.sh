@@ -1,3 +1,5 @@
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+CDIR="$(pwd)"
 
 . settings.sh
 

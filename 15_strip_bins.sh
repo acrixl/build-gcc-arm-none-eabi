@@ -1,7 +1,9 @@
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+CDIR="$(pwd)"
 
 . settings.sh
 
-TPREFIX=`readlink -f $TARGET_TMP_PREFIX`
+TPREFIX=`readlink -f $TARGET_TMP_PREFIX_FULL`
 
 BINS1=$TPREFIX/arm-none-eabi/bin/*
 BINS2=$TPREFIX/bin/*

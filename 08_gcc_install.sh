@@ -1,11 +1,13 @@
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+CDIR="$(pwd)"
 
 . settings.sh
 
-TPREFIX=`readlink -f $TARGET_TMP_PREFIX`
+TPREFIX=`readlink -f $TARGET_TMP_PREFIX_FULL`
 
 cd $BUILD_DIR/build-gcc
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export PATH=/usr/bin:/bin
 
 echo "Install gcc"
 

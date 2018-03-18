@@ -1,15 +1,17 @@
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+CDIR="$(pwd)"
 
 . settings.sh
 
-TPREFIX=`readlink -f $TARGET_TMP_PREFIX`
+TPREFIX=`readlink -f $TARGET_TMP_PREFIX_FULL`
 
-#MULTILIB_LIST="--with-multilib-list=armv6-m,armv7-m,armv7e-m,armv7-r,armv8-m.base,armv8-m.main"
+mkdir -p $TPREFIX
 
 mkdir -p $BUILD_DIR/build-gcc
 
 cd $BUILD_DIR/build-gcc
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export PATH=/usr/bin:/bin
 
 ../../$SRCE_TARGET_DIR/$GCC_VERSION/configure \
  --prefix=$TPREFIX \
