@@ -2,7 +2,7 @@
 
 Build scripts for build bare-metal toolchain (arm-none-eabi) with newlib
 
-Version: 7.3.0
+Version: 7.3.0-R1
 
 tested on Debian buster
 

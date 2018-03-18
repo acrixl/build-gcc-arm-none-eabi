@@ -6,6 +6,7 @@ CDIR="$(pwd)"
 TPREFIX=`readlink -f $TARGET_TMP_PREFIX_FULL`
 
 mkdir -p $TPREFIX
+
 mkdir -p $BUILD_DIR/build-binutils
 
 cd $BUILD_DIR/build-binutils
