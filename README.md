@@ -23,3 +23,4 @@ tollchain in out
 * srce - for extracting sources
 * build - temp dir for build
 * out - target dir for toolchain
+* tarball - output tarball
